@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    <title>Document</title>
 </head>
 <body>
     <div class="header">
@@ -20,7 +20,19 @@
             </ul>
         </div>
     </div>
-    <p>hello, im codi!</p>
-    <p>type in any description and ill find you the right word for it!</p>
+    <div class="description-box">
+        <h1>Hello, i'm Codi!</h1>
+        <h3>Type in any description and i'll find you the right word for it!</h3>    
+    </div>
+   <div class="search-box">
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Search any definition" autocomplete="off">
+            <button><i class="fa fa-search"></i></button>
+        </div>
+        <div class="result-box">
+         
+        </div>
+    </div>
+    <script src="autocomplete.js"></script>
 </body>
 </html>
