@@ -6,7 +6,7 @@
     font-family: 'Montserrat';
 }
 body{
-    background-color: antiquewhite;
+    background-color: rgb(250, 235, 215);
     color: #333;
 }
 .header{
@@ -14,7 +14,7 @@ body{
     width: 100%;
     height: 80px;
     display: block;
-    background-color: #101010;
+    background-color: rgb(250, 235, 215);
 }
 .inside_header{
     width: 1000px;
@@ -28,7 +28,7 @@ body{
     float: left;   
 }
 .logo_container h1{
-    color: white;
+    color: #333;
     height: 100%;
     display: table-cell;
     vertical-align: middle;
@@ -52,7 +52,7 @@ body{
     display: table-cell;
     vertical-align: middle;
     height: 100%;
-    color: white;
+    color: #333;
     font-family: 'Montserrat';
     font-size: 16px;
 }
@@ -62,18 +62,23 @@ body{
 .nav_bar a:hover li{
    color: rgb(120, 76, 23);
 }
+.container{
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 90%;
+    box-sizing: border-box;
+    text-align: center;
+}
 .description-box{
     margin: 50px 340px 0;
 }
-h1, h2{
-    display: flex;
-    align-items: center;
+.description-box h1{
+    margin-bottom: 5px;
 }
-
 .search-box{
     width: 600px;
     background: #fff;
-    margin: 50px auto 0;
+    margin: 30px auto 0;
     border-radius:5px;  /*CHANGE IT TO 45px*/ 
 }
 
@@ -110,6 +115,7 @@ cursor: pointer;
     padding: 15px 10px;
 }
 .result-box ul li{
+    text-align: left;
     list-style: none;
     border-radius: 3px;
     padding: 15px 10px;
@@ -122,16 +128,48 @@ cursor: pointer;
     max-height: 300px;
     overflow-y: scroll;
 }
-/*TODO fix responsiveness for header*/
-@media screen and (max-width:1024px) {
-    .header a{
-        float: left;
-        display: table;
-        vertical-align: middle;
-        
+
+/*TODO fix responsiveness for navbar*/
+@media screen and (max-width: 1024px) {
+    .nav_bar{
+        display: none;
     }
-    .nav_bar {
-     float: left; 
+    .inside_header{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        background-color: yellow;
     }
-    
+    .description-box {
+        margin: 20px auto; /* Center the box and reduce margins */
+        padding: 0 10px; /* Add some padding for smaller devices */
+    }
+
+    .search-box {
+        width: 100%; /* Make the search box full width */
+        margin: 20px auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .description-box h1 {
+        font-size: 20px; /* Smaller font size for small screens */
+    }
+
+    .description-box h3 {
+        font-size: 16px;
+    }
+
+    .search-box {
+        border-radius: 10px; /* Slightly smaller radius */
+        padding: 10px;
+    }
+
+    .row input {
+        font-size: 16px; /* Adjust input font size */
+    }
+
+    button .fa-search {
+        font-size: 18px; /* Adjust button icon size */
+    }
 }
