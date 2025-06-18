@@ -57,7 +57,8 @@ definition
     <li>${definition}</li>
       `;
   } else {
-    resultsBox.innerHTML = "No definition found for the word.";
+    resultsBox.innerHTML = "No definition found for the word";
   }
 })
 }
+
