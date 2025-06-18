@@ -1,0 +1,45 @@
+{
+    "fish" : [     
+         {
+            "seasons" : ["Fall", "Summer", "Spring", "Winter"],
+            "name" : "Woodskip",
+            "weather" : "Any Weather",
+            "time" : "Any Time",
+            "location" : "Secret Woods",
+            "image" : "https://stardewvalleywiki.com/mediawiki/images/9/97/Woodskip.png"
+        },
+        {
+            "seasons" : ["Fall", "Summer", "Spring", "Winter"],
+            "name" : "Void Salmon",
+            "weather" : "Any Weather",
+            "time" : "Any Time",
+            "location" : "Witch's Swamp",
+            "image" : "https://stardewvalleywiki.com/mediawiki/images/a/ad/Void_Salmon.png"
+        },
+        {
+            "seasons" : ["Fall", "Summer", "Winter"],
+            "name" : "Red Snapper",
+            "weather" : "Rain",
+            "time" : "6am- 7pm",
+            "location" : "Ocean",
+            "image" : "https://stardewvalleywiki.com/mediawiki/images/d/d3/Red_Snapper.png"
+        },
+        {
+            "seasons" : ["Fall", "Winter"],
+            "name" : "Midnight Carp",
+            "weather" : "Any Weather",
+            "time" : "10pm - 2am",
+            "location" : "Mountain Lake",
+            "image" : "https://stardewvalleywiki.com/mediawiki/images/3/33/Midnight_Carp.png"
+        },        
+        {
+            "seasons" : ["Fall", "Winter"],
+            "name" : "Tiger Trout",
+            "weather" : "Any Weather",
+            "time" : "6am - 7pm",
+            "location" : "River",
+            "image" : "https://stardewvalleywiki.com/mediawiki/images/0/01/Tiger_Trout.png"
+        },
+...
+    ]
+}
