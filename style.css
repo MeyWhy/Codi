@@ -119,10 +119,7 @@ cursor: pointer;
     list-style: none;
     border-radius: 3px;
     padding: 15px 10px;
-    cursor: pointer;
-}
-.result-box ul li:hover{
-    background-color: #e9f3ff;
+    cursor: auto;
 }
 .result-box{
     max-height: 300px;
@@ -130,6 +127,7 @@ cursor: pointer;
 }
 
 /*TODO fix responsiveness for navbar*/
+/*TODO enlever ça car no navbar needed*/
 @media screen and (max-width: 1024px) {
     .nav_bar{
         display: none;
