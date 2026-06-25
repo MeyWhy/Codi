@@ -16,47 +16,39 @@
            
         </div>
     </div>
-    <div class="container">
-    <div class="description-box">
-        <h1>Hello, i'm Codi!</h1>
-        <h3>Type in any definition and i'll find the right word for it!</h3>    
-    </div>
-   <div class="search-box">
-        <div class="row">
-            <input type="text" id="input" placeholder="Search any definition" autocomplete="off">
-            <button class="button-search" onclick="handleClick()"> <i class="fa fa-spinner fa-spin"></i>
-            <svg xmlns="https://www.w3.org/2000/svg"
-                 height="1em" 
-                 class="search" 
-                 viewBox="0 0 512 512">
-                <style>
-                    svg {
-                        fill: #0a0101
-                    }
-                </style>
-                <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
-            </svg>
-        </div>        </button>
-        <p class="error"></p>
-        <div class="result-box">
-         <ul class="list-result">
-           <li>  <div class="word-name">
-               
-                 <h2 id="word-txt"></h2>
-                    <p>
-                        <span id="type-txt"></span><br>
-                        
-                        <span id="phonetic-txt"></span>
-                    </p>
-            </div>
-            <div class="word-definition">
-            <p class="definition-txt"></p>   
-               </div> 
-            </li>
+   <div class="container">
 
-            </ul>
-        
-    </div>
+    <h1>Coucou, moi c'est Codi,</h1>
+    <h2>Je suis un solver de Mots Fléchés</h2>
+
+    <p id="status">
+        Chargement...
+    </p>
+
+    <input
+        type="text"
+        id="clue"
+        placeholder="ex: animal exotique"
+    >
+    <input
+        type="text"
+        id="pattern"
+        placeholder="Mot connu (ex: C___N)"
+    >
+    <input
+        type="number"
+        id="length"
+        placeholder="Longueur"
+    >
+    <button id="searchBtn">
+        Rechercher
+    </button>
+
+    <p id="count"></p>
+
+    <ul id="results"></ul>
+
+</div>
 
     
     <script src="script.js"></script>
