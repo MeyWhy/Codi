@@ -6,6 +6,9 @@ A "reverse dictionary" to find all the words from either a keyword, a word lengt
 
 The objective is to help you find any word based on some keywords you'll input    
 
+<img width="957" height="344" alt="codi" src="https://github.com/user-attachments/assets/638d747e-53d5-4e24-8d16-0df497e3e7cb" />
+
+
 ---   
 ### To start it:   
 - lancer un serveur HTTP pour loader le dictionnaire (dictionary.json)   
