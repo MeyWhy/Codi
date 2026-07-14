@@ -1,5 +1,5 @@
 //DONE fix basic skull: gets 1 word clue + pattern
-//TODO add synonym check
+//DONE add synonym check
 //TODO fix ui (better)
 //TODO add loading (le temps de charger le dico)
 //TODO might add transformer process for better res (process pattern as sentence)
@@ -18,7 +18,7 @@ async function loadDictionary() {
       dictionary= await response.json();
       const totalwords=Object.values(dictionary).reduce((sum, arr)=> sum+arr.length, 0);
       console.log("Dico loaded: ", totalwords, " words");
-     // console.log(dictionary);
+    // console.log(dictionary);
     // console.log(Object.keys(dictionary));
     // console.log(dictionary["4"]);
 
@@ -84,8 +84,9 @@ function solve(clue, pattern, length) {
     if (!candidateMatches(entry, pattern, length)){
       continue;
     }
-
-  const score=clue ? scoreDefinition(clue, entry.definition) : 0;
+  
+  const score=clue ? scoreDefinition(clue, entry.definition, entry.synonyms) : 0;
+  
   let finalScore=score;
   if(pattern){
     finalScore+=1;
@@ -104,9 +105,11 @@ function solve(clue, pattern, length) {
   return results;
 }
 
-function scoreDefinition(clue, definition){
+function scoreDefinition(clue, definition, synonym){
   const clueWords= stripAccent(clue.toLowerCase()).match(/\p{L}+/gu) || [];
   const defWords= new Set(stripAccent((definition|| "").toLowerCase()).match(/\p{L}+/gu) ||[]);
+  const synonymWords= stripAccent((synonym || []).join(" ").toLowerCase()).match(/\p{L}+/gu) || [];
+  synonymWords.forEach(word => defWords.add(word));
 
   let score=0;
   for(const word of clueWords){
