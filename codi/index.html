@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="inside_header">
+            <div class="logo_container">
+                <h1><span>CODI</span></h1>
+            </div>
+           
+        </div>
+    </div>
+   <div class="container">
+
+    <h1>Coucou, moi c'est Codi,</h1>
+    <h2>Je suis un solver de Mots Fléchés</h2>
+
+    <p id="status">
+        Chargement...
+    </p>
+
+    <input
+        type="text"
+        id="clue"
+        placeholder="ex: animal exotique"
+    >
+    <input
+        type="text"
+        id="pattern"
+        placeholder="Mot connu (ex: C___N)"
+    >
+    <input
+        type="number"
+        id="length"
+        placeholder="Longueur"
+    >
+    <button id="searchBtn">
+        Rechercher
+    </button>
+
+    <p id="count"></p>
+
+    <ul id="results"></ul>
+
+</div>
+
+    
+    <script type="module" src="/src/script.js"></script>
+</body>
+</html></div>
