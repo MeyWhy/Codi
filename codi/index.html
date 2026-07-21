@@ -1,56 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Codi</title>
 </head>
 <body>
-    <div class="header">
-        <div class="inside_header">
-            <div class="logo_container">
-                <h1><span>CODI</span></h1>
+    <div class="container">
+        <header class="masthead">
+            <h1 class="logo">Codi</h1>
+        </header>
+
+        <p class="intro">Coucou, moi c'est Codi, je suis un solveur de mots fléchés. Donne-moi une définition, un pattern ou une taille</p>
+
+        <section class="search-box">
+            <div class="field field-clue">
+                <label for="clue">Définition</label>
+                <input type="text" id="clue" placeholder="ex : animal exotique">
             </div>
-           
-        </div>
+            <div class="field-row">
+                <div class="field field-pattern">
+                    <label for="pattern">Pattern</label>
+                    <input type="text" id="pattern" placeholder="C___N">
+                </div>
+                <div class="field field-length">
+                    <label for="length">Taille</label>
+                    <input type="number" id="length" placeholder="&#8212;">
+                </div>
+                <button id="searchBtn" class="button-search">
+                    <span>Chercher</span>
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </section>
+
+        <div id="loader" class="loader"></div>
+        <p id="count"></p>
+        <section class="result-box">
+            <ul id="results"></ul>
+        </section>
     </div>
-   <div class="container">
+        <script type="module" src="/src/script.js"></script>
 
-    <h1>Coucou, moi c'est Codi,</h1>
-    <h2>Je suis un solver de Mots Fléchés</h2>
-
-    <p id="status">
-        Chargement...
-    </p>
-
-    <input
-        type="text"
-        id="clue"
-        placeholder="ex: animal exotique"
-    >
-    <input
-        type="text"
-        id="pattern"
-        placeholder="Mot connu (ex: C___N)"
-    >
-    <input
-        type="number"
-        id="length"
-        placeholder="Longueur"
-    >
-    <button id="searchBtn">
-        Rechercher
-    </button>
-
-    <p id="count"></p>
-
-    <ul id="results"></ul>
-
-</div>
-
-    
-    <script type="module" src="/src/script.js"></script>
 </body>
-</html></div>
+</html>

@@ -254,6 +254,13 @@ document.getElementById("searchBtn").addEventListener("click",search);
     alert("Model is still loading...");
     return;
 }
+    const button = document.getElementById("searchBtn");
+    const loader= document.getElementById('loader');
+    loader.style.display="block";
+    button.disabled = true;
+    try {
+    await new Promise(requestAnimationFrame);
+
     const pattern =document.getElementById("pattern").value.trim();
 
     const clue =document.getElementById("clue").value.trim();
@@ -281,4 +288,9 @@ document.getElementById("searchBtn").addEventListener("click",search);
         });
 
     document.getElementById("count").textContent =`${results.length} résultat(s)`;
+    }
+    finally{
+    loader.style.display="none";
+    button.disabled = false;
+}
 }
